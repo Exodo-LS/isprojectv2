@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!Navbar>
+
+<div class="brand-logo">
+  <a href="index.html" title="Logo"><img style="vertical-align:middle" src="img/SimplisticStudios.png"></a> <!-- Swap this placeholder out for your logo image -->
+</div>
+
+<div class="topnav" id="myTopnav">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="Git_Tutorial.html">Git Tutorial</a>
+    <a class="nav-item" href="Docker_Tutorial.html">Docker Tutorial</a>
+    <a class="nav-item" href="Azure_Cloud_Tutorial.html">Azure Cloud Tutorial</a>
+    <a class="nav-item" href="Useful_Commands.html">Useful Commands</a>
+    <a class="nav-item" href="Pylint.html">Pylint</a>
+    <a class="nav-item" href="Glossary.html">Glossary</a>
+    <a class="nav-item" href="AAA_Testing.html">AAA Testing</a>
+    <a class="nav-item" href="OOP.html">Object Oriented Programming</a>
+    <a class="nav-item" href="SOLID.html">SOLID</a>
+    <a class="nav-item" href="Members_of_Project.html">Members of Project</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div>
+  <section>
+    <div class="welcometxt">
+      <h1>Welcome to the Pylint Page</h1>
+      <p>This will explain what pylint is and how to configure it on Pycharm and Docker. There will also be some other important terms that should be known.</p>
+      <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>What is Pylint?</h3>
+      <p>Pylint is a tool that checks for any errors in your Python code. Pylint will tell you which line the error is on and what type of error it is. If your project has multiple Python files, Pylint will indicate which file failed.</p>
+      <h3>How to configure pylint?</h3>
+        <h4>This is only valid projects using docker</h4>
+      <p>The Steps Are As Followed
+      </p>
+      <ol>
+        <li>In pycharm, right-click the project directory and create a file call <b>requirements.txt</b>.</li>
+        <li>Double left-click that file to open it and insert these lines of text:
+          <ul>
+            <li><b>pytest</b></li>
+            <li><b>pycodestyle</b></li>
+            <li><b>pytest-pylint</b></li>
+          </ul>
+          <img class="tutpng" src="img/requirements.png" alt="Picture of Requirements.txt"> <br>
+          You can add <b>pytest-cov </b> if you want to test coverage as well, but that's for another time.
+        </li>
+        <li>Now let's reference our Docker Tutorial and create a Dockerfile. Right-click the directory and create a new file called <b>Dockerfile</b>.</li>
+        <li>With the file made, insert the following code:
+        <ul style="list-style-type: none">
+          <li><b>FROM python:3.9-alpine</b></li>
+          <li><b>RUN  /usr/local/bin/python -m pip install --upgrade pip</b></li>
+          <li><b>RUN adduser -D myuser</b></li>
+          <li><b>RUN apk add --no-cache gcc musl-dev linux-headers</b></li>
+          <li><b>USER myuser</b></li>
+          <li><b>WORKDIR /home/myuser</b></li>
+          <li><b>ENV PATH="/home/myuser/.local/bin":${PATH}</b></li>
+          <li><b>COPY --chown=myuser:myuser . .</b></li>
+          <li><b>RUN pip install --user -r requirements.txt</b></li>
+        </ul>
+          <img class="tutpng" src="img/dockerfile.png" alt="Picture of Dockerfile">
+        </li>
+        <li>Right-click the directory again and create a file called<b>docker-compose.yml and enter the following:</b>
+          <ul style="list-style-type: none">
+            <li><b>version: "3.2"</b></li>
+            <li><b>services:</b></li>
+            <li>&nbsp;&nbsp;<b>python:</b></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<b> build: .</b></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>stdin_open: true              # docker run -i</b></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>tty: true                     # docker run -t</b></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<b>volumes:</b></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- .:/home/myuser</b></li>
+          </ul>
+          <img class="tutpng" src="img/compose.png" alt="Picture of docker-compose.yml">
+        </li>
+        <li>Now we need to configure Docker to be our interpreter for Python. To do this, click the "Add Configuration" towards the top of Pycharm and click the + to create a configuration.</li>
+        <li>Select Docker-compose and name the configuration. Click the folder button to select your <b>docker-compose.yml</b> file. Click modify containers and select recreate containers and then all. The configuration should like this if done correctly.
+        <br>
+          <img class="tutpng" src="img/configuration.png" alt="Configuration for Docker on Pycharm">
+        </li>
+        <li>On the bottom right, make sure configuration is there and click the on the "run" button at the top. Open the service tab at the bottom, and you should see docker running.</li>
+        <li>Click on the arrow next to the container and click the arrow next to python. Right-click the object and create a terminal</li>
+        <li>Run <b>pip install --user -r requirements.txt</b> in the terminal to make sure everything is installed. Then run <b>pytest --pylint</b> and the result will tell you if you had any errors, warnings, or if it passed. In my case, I had everything pass with one warning.<br>
+        <img class="tutpng" src="img/pylint.png">
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</div>
+
+<sectioin>
+  <div class="emptyspace"></div>
+</sectioin>
+
+</body>
+</html>

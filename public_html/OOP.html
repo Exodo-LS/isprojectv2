@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!Navbar>
+
+<div class="brand-logo">
+  <a href="index.html" title="Logo"><img style="vertical-align:middle" src="img/SimplisticStudios.png"></a> <!-- Swap this placeholder out for your logo image -->
+</div>
+
+<div class="topnav" id="myTopnav">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="Git_Tutorial.html">Git Tutorial</a>
+    <a class="nav-item" href="Docker_Tutorial.html">Docker Tutorial</a>
+    <a class="nav-item" href="Azure_Cloud_Tutorial.html">Azure Cloud Tutorial</a>
+    <a class="nav-item" href="Useful_Commands.html">Useful Commands</a>
+    <a class="nav-item" href="Pylint.html">Pylint</a>
+    <a class="nav-item" href="Glossary.html">Glossary</a>
+    <a class="nav-item" href="AAA_Testing.html">AAA Testing</a>
+    <a class="nav-item" href="OOP.html">Object Oriented Programming</a>
+    <a class="nav-item" href="SOLID.html">SOLID</a>
+    <a class="nav-item" href="Members_of_Project.html">Members of Project</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div>
+  <section>
+    <div class="welcometxt">
+      <h1>Welcome to the OOP Page</h1>
+      <p>This page will prove what parts of my code possess Inheritance, Abstraction, Encapsulation, Polymorphism</p>
+      <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>Polymorphism</h3>
+      <h4>&nbsp;&nbsp;The ability to use a common interface for multiple forms</h4>
+      <p>The part of my calculator_v2 project that would represent Polymorphism would be in <i>calc_test.py</i>. The
+        rationale behind my logic is that I can create multiple tuples that are used in the same function call.
+        Theoretically, I can run addition or any other operation as many times as I want through <i>calc_test.py</i> and
+        that will keep providing me with new values for the results. I even added a new method to validate the process.
+        Therefore, the entire <i>calc_test.py</i> file serves as a means of Polymorphism.</p>
+      <img class="tutpng" src="img/polymorphism1.png" alt="Snippet of code">
+      <br>
+      <br>
+      <img class="tutpng" src="img/polymorphism2.png" alt="Result of Pytest">
+      <p>With the pictures given, the "test_calc_polymorphism" function was made to prove that I can make two separate
+      tuples that can run the same math operation. In my case, I used addition since it was easier. However, that
+      testing can be applied to the other operation. The pylint check validates that there is no error with both tuples
+      be added. I do believe that concept works in <i>history_test.py</i> with the function that can remove a value
+      from the list of calculation.</p>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>Inheritance</h3>
+      <h4>&nbsp;&nbsp;Creating a new class for using details of an existing class without modifying it</h4>
+      <p>The part of my calculator_v2 project that would represent Inheritance would be in the <u>operations directory
+      </u>. This directory possesses all the operations including <i>calculations.py</i>. This file is what takes in the
+        tuples that are inputted. It is the addition class from <i>addition.py</i> that would use the tuples from the
+        calculations class from the <i>calculations.py</i> file. The same applies for all the other operations in that
+        directory.</p>
+      <img class="tutpng" src="img/Inhertitance1.png" alt="Snippet of code from calculations.py">
+      <br>
+      <br>
+      <img class="tutpng" src="img/Inhertitance2.png" alt="Snippet of code from addition.py">
+      <p>The pictures depicts the process to complete a given operation. When <i>calc_test.py</i> runs the addition
+      operation, the addition class will send the tuple over to the calculations class for addition to be able to add
+      the values with the tuple. The addition class inherits the values with the tuple from the calculations class.</p>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>Encapsulation</h3>
+      <h4>&nbsp;&nbsp;Prevents direct modification of data</h4>
+      <p>As seen from the sections prior, the calculator_v2 project possesses attributes of Object-Oriented Programming.
+      This section is no different. This section is about Encapsulation, but what part of my code protects data from
+      direct modification? It is quite simple because that lies in the operations the return the value. The tuples are
+        taken and perform the desired operation, and we get the result. Yet, we cannot modify that result. While those
+        values can be purged from the history list, it's the history list that is getting modified. Therefore, those
+      result values are never modified. </p>
+      <img class="tutpng" src="img/Encapsulation1.png" alt="Snippet of code from addition.py">
+      <p>Yes it is the same picture used in the Inheritance section. The sum that is generated is accessed or modified.
+        It is stored in a list that contains the sum. The list can remove the value from itself which indirectly
+      modifies the sum to not exist.</p>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>Abstraction</h3>
+      <h4>&nbsp;&nbsp;Hiding the unnecessary details from the users</h4>
+      <p>The last attribute to talk about in Object-Oriented Programming is Abstraction. Although my files do not
+        possess abstract classes or methods, it does do a good job at displaying what is needed. This is mainly evident
+      in both <i>calc_test.py</i> and <i>history_test.py</i>. Both files just show the user that do math operations and
+      modify the history list. Thus, it makes both files not very complex.</p>
+      <img class="tutpng" src="img/Abstraction1.png" alt="Snippet from history_test.py">
+      <br>
+      <br>
+      <img class="tutpng" src="img/Abstraction2.png" alt="Snippet from calculations.py from the history directory">
+      <p>The level of complexity increases when having to keep track of what each function does when a user does not
+      understand what the programmer made. At one point, both testing files were merged into one file. The same applies
+      for the <i>calculate.py</i> and <i>calculations.py</i> from the history directory. Although I know how to easily
+      maneuver that code, a simple user would not understand and simply not use the program due to its high level
+      of complexity.</p>
+    </div>
+  </section>
+</div>
+</body>
+</html>
