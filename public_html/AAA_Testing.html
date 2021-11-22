@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!Navbar>
+
+<div class="brand-logo">
+  <a href="index.html" title="Logo"><img style="vertical-align:middle" src="img/SimplisticStudios.png"></a> <!-- Swap this placeholder out for your logo image -->
+</div>
+
+<div class="topnav" id="myTopnav">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="Git_Tutorial.html">Git Tutorial</a>
+    <a class="nav-item" href="Docker_Tutorial.html">Docker Tutorial</a>
+    <a class="nav-item" href="Azure_Cloud_Tutorial.html">Azure Cloud Tutorial</a>
+    <a class="nav-item" href="Useful_Commands.html">Useful Commands</a>
+    <a class="nav-item" href="Pylint.html">Pylint</a>
+    <a class="nav-item" href="Glossary.html">Glossary</a>
+    <a class="nav-item" href="AAA_Testing.html">AAA Testing</a>
+    <a class="nav-item" href="OOP.html">Object Oriented Programming</a>
+    <a class="nav-item" href="SOLID.html">SOLID</a>
+    <a class="nav-item" href="Members_of_Project.html">Members of Project</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div>
+  <section>
+    <div class="welcometxt">
+      <h1>Welcome to the AAA Testing Page</h1>
+        <p>This page will briefly explain how AAA Testing works.</p>
+      <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </section>
+  <section>
+    <div class="ghtxt">
+      <h3>What is AAA Testing?</h3>
+      <p>Testing validates that your functions are working as they are expected. AAA Testing is a form of testing that contains the following: </p>
+      <dl>
+        <dt>1. <b>Arrange</b></dt>
+        <dd>- This step sets up you test case. Making sure that you have all required imports, databases, etc. for the test</dd>
+        <dt>2. <b>Act</b></dt>
+        <dd>- This step focuses what you are actually testing. This may be functions that you are validating from another class using inputs in the testing class</dd>
+        <dt>3. <b>Assert</b></dt>
+        <dd>- This is the checking step. The assert statement serves that your input generates the correct output. It will prompt an error if the test passes and if you do not an error, the test passed.</dd>
+      </dl>
+    </div>
+    <div class="ghtxt">
+      <h3>Example Time:</h3>
+      <p>Sometimes a picture does a much better job at explaining definitions. So I have provided an AAA Test from my calculator project.</p>
+      <img class="tutpng" src="img/AAATesting.png" alt="AAA Testing Demo">
+      <p>Let me break down what you see. The <b>test_calc_add</b> function is the function I chose to represent how AAA Testing can be implement.</p>
+      <ol>
+        <li>The <b>arrange </b> step begins where I set up the variable <i>my_tuple</i> with a bunch of floats which represent the values to be added together. I set up what I am planning to add together before I move on to <b>Act</b></li>
+        <li>The <b>act </b> step is where I run <i>Calculate.add_numbers(my_tuple)</i>. This step calls the <i>add_numbers </i> function from the <i>Calculate </i> class. This function requires a parameter and in the previous step, I set up <i>my_tuple </i> to fulfill the parameter requirement.</li>
+        <li>Lastly, we approach the <b> assert </b> step. As you can see, there are two assert statements. The first assert checks that <i>Calculate.add_numbers(my_tuple)</i> uses the <i> Addition </i> class. The second assert checks that the addition results in 20.0 through <i>Calculate.get_last()</i>.</li>
+      </ol>
+      <h3>Hopefully with this example, you have understood and are able to implement AAA Testing when you code your projects.</h3>
+    </div>
+  </section>
+</div>
+<sectioin>
+  <div class="emptyspace"></div>
+</sectioin>
+</body>
+</html>
