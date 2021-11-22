@@ -1,7 +1,7 @@
 services:
   frontend:
     build: .
-    image: ma2298/is218projectv2
+    image: ma2298/isprojectv2
     ports:
       - "80:80"
     depends_on:
