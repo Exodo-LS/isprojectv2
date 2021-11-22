@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!Navbar>
+
+<div class="brand-logo">
+  <a href="index.html" title="Logo"><img style="vertical-align:middle" src="img/SimplisticStudios.png"></a> <!-- Swap this placeholder out for your logo image -->
+</div>
+
+<div class="topnav" id="myTopnav">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="Git_Tutorial.html">Git Tutorial</a>
+    <a class="nav-item" href="Docker_Tutorial.html">Docker Tutorial</a>
+    <a class="nav-item" href="Azure_Cloud_Tutorial.html">Azure Cloud Tutorial</a>
+    <a class="nav-item" href="Useful_Commands.html">Useful Commands</a>
+    <a class="nav-item" href="Pylint.html">Pylint</a>
+    <a class="nav-item" href="Glossary.html">Glossary</a>
+    <a class="nav-item" href="AAA_Testing.html">AAA Testing</a>
+    <a class="nav-item" href="OOP.html">Object Oriented Programming</a>
+    <a class="nav-item" href="SOLID.html">SOLID</a>
+    <a class="nav-item" href="Members_of_Project.html">Members of Project</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<section>
+  <div class="welcometxt">
+    <h1>Useful Commands for Git Bash</h1>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+  <div class="ghtxt">
+    <ul>
+      <li><b>git config --global user.name “[firstname lastname]”:</b> set a name that is identifiable for credit when review version history</li>
+      <li><b>git config --global user.email “[valid-email]”:</b> set an email address that will be associated with each history marker</li>
+      <li><b>git config --global color.ui auto:</b> set automatic command line coloring for Git for easy reviewing</li>
+      <li><b>git init:</b> initialize an existing directory as a Git repository</li>
+      <li><b>git clone[url]:</b> retrieve an entire repository from a hosted location via URL</li>
+      <li><b>git status:</b> show modified files in working directory, staged for your next commit</li>
+      <li><b>git add [file]:</b> add a file as it looks now to your next commit (stage)</li>
+      <li><b>git reset [file]:</b> unstage a file while retaining the changes in working directory</li>
+      <li><b>git diff:</b> diff of what is changed but not staged</li>
+      <li><b>git diff --staged:</b> diff of what is staged but not yet committed</li>
+      <li><b>git commit -m “[descriptive message]”:</b> commit your staged content as a new commit snapshot</li>
+      <li><b>git branch:</b> list your branches. a * will appear next to the currently active branch </li>
+      <li><b>git branch [branch-name]:</b> create a new branch at the current commit</li>
+      <li><b>git checkout:</b> switch to another branch and check it out into your working directory </li>
+      <li><b>git rm [file]:</b> delete the file from project and stage the removal for commit</li>
+      <li><b> git mv [existing-path] [new-path]:</b> change an existing file path and stage the move </li>
+      <li><b>git remote add [alias] [url]:</b> add a git URL as an alias</li>
+      <li><b>git fetch [alias]:</b> fetch down all the branches from that Git remote </li>
+      <li><b>git merge [alias]/[branch]:</b> merge a remote branch into your current branch to bring it up to date </li>
+      <li><b>git push [alias] [branch]:</b> Transmit local branch commits to the remote repository branch </li>
+      <li><b>git pull:</b> fetch and merge any commits from the tracking remote branch </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="ghtxt">
+    <h1>Useful Commands for vi</h1>
+    <ul>
+    <li><b>vim or vi -</b> Run vim and open the given filename. </li>
+    <li><b>:w:</b> Save file. </li>
+    <li><b>:x or SHIFT ZZ -</b> Save and exit. </li>
+    <li><b>:q -</b> Exit if no changes have been made. </li>
+    <li><b>:q! -</b> Exit and undo any changes made. </li>
+    <li><b>wq -</b> Write and Quit </li>
+    <li><b>:set nu -</b> Display line numbers. </li>
+    <li><b>i -</b> insert mode </li>
+    <li><b>Escape -</b> get out of insert mode </li>
+    <li><b>SHIFT : (colon) -</b> command prompt for vi </li>
+    <li><b> W = command to write:</b></li>
+    </ul>
+  </div>
+</section>
+
+<sectioin>
+  <div class="emptyspace"></div>
+</sectioin>
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
