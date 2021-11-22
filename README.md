@@ -12,7 +12,7 @@ Mohammad-Shamel Agha
 ```
 #Links:
 
-Access site using the domain name: [myapp.eastus.azurecontainer.io](http://myapp.eastus.azurecontainer.io/index.html)
+Access site using the domain name: [myapp.eastus.azurecontainer.io](http://myapp.eastus.azurecontainer.io/index.html)  
 Access site using the ip address:  [20.120.68.18](http://20.120.68.18/) 
 Github Page Link: https://exodo-ls.github.io/isprojectv2/public_html/index.html  
 Calculator Respository: https://github.com/Exodo-LS/calculator_v2/tree/Revised
